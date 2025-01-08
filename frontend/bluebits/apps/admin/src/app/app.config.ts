@@ -15,7 +15,7 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditorModule } from 'primeng/editor';
 
-import { JwtInterceptor, USERS_FEATURE_KEY, usersReducer, usersRoutes } from '@bluebits/users';
+import { JwtInterceptor, USERS_FEATURE_KEY, UsersEffects, usersReducer, usersRoutes } from '@bluebits/users';
 import { TagModule } from 'primeng/tag';
 import { ColorPickerModule } from 'primeng/colorpicker';
 import { DropdownModule } from 'primeng/dropdown';
@@ -25,10 +25,11 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { PaginatorModule } from 'primeng/paginator';
-import { provideState, provideStore, StoreModule } from '@ngrx/store';
-import { EffectsModule, provideEffects } from '@ngrx/effects';
-import { UsersEffects } from 'libs/users/src/lib/state/users.effects';
+import { provideState, provideStore } from '@ngrx/store';
+import { provideEffects } from '@ngrx/effects';
+
 import { provideNgxStripe } from 'ngx-stripe';
+
 
 
 

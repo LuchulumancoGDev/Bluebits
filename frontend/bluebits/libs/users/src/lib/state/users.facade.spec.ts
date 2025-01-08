@@ -11,10 +11,8 @@ import { UsersEntity } from './users.models';
 import {
   USERS_FEATURE_KEY,
   UsersState,
-  initialUsersState,
   usersReducer,
 } from './users.reducer';
-import * as UsersSelectors from './users.selectors';
 
 interface TestSchema {
   users: UsersState;
