@@ -4,9 +4,7 @@ import { select, Store } from '@ngrx/store';
 import * as UsersActions from './users.actions';
 import * as UsersSelectors from './users.selectors';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable()
 export class UsersFacade {
   private readonly store = inject(Store);
 
