@@ -14,7 +14,6 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ToastModule } from 'primeng/toast';
 import { EditorModule } from 'primeng/editor';
 import { InputSwitchModule } from 'primeng/inputswitch';
-import { InputTextarea } from 'primeng/inputtextarea';
 import { ToolbarModule } from 'primeng/toolbar';
 import { ColorPickerModule } from 'primeng/colorpicker';
 import { InputMaskModule } from 'primeng/inputmask';
@@ -26,8 +25,7 @@ import { CartService } from '../../services/cart.service';
 import { Cart } from '../../models/cart';
 import { OrderService } from '../../services/orders.service';
 import { ORDER_STATUS } from '../../order.constants';
-import { Subject, take, takeUntil } from 'rxjs';
-import { StripeService } from 'ngx-stripe';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
     selector: 'orders-checkout-page',
@@ -43,8 +41,8 @@ export class CheckoutPageComponent implements OnInit, OnDestroy {
     private formBuilder: FormBuilder,
     private cartService: CartService,
     private orderService: OrderService,
-    private messageService: MessageService, 
-    
+    private messageService: MessageService,
+
   ) {}
 
   checkoutFormGroup!: FormGroup;
@@ -133,7 +131,7 @@ export class CheckoutPageComponent implements OnInit, OnDestroy {
       return;
     }
 
-    
+
     const order: Order = {
       orderItems: this.orderItems,
       shippingAddress1: this.checkoutForm['street'].value,
@@ -153,10 +151,10 @@ export class CheckoutPageComponent implements OnInit, OnDestroy {
       if (error)
       {
         console.log('error in redirect to payment');
-        
+
       }
-      
-    });  
+
+    });
 
   }
 

@@ -2,9 +2,7 @@ import { CommonModule, Location } from '@angular/common';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { CategoriesService, ProductsService } from '@bluebits/products';
-import { User } from 'libs/users/src/lib/models/user';
-import { UsersService } from 'libs/users/src/lib/users.service';
+
 import { MessageService } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
@@ -17,9 +15,9 @@ import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ToastModule } from 'primeng/toast';
 import { ToolbarModule } from 'primeng/toolbar';
-import { timer } from 'rxjs';
 import { InputMaskModule } from 'primeng/inputmask';
 import * as countriesLib from 'i18n-iso-countries';
+import { UsersService } from '@bluebits/users';
 
 declare const require: (arg0: string) => countriesLib.LocaleData;
 

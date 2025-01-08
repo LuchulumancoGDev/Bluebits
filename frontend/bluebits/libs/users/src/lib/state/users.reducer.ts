@@ -1,8 +1,6 @@
-import { EntityState, EntityAdapter, createEntityAdapter } from '@ngrx/entity';
 import { createReducer, on, Action } from '@ngrx/store';
 
 import * as UsersActions from './users.actions';
-import { UsersEntity } from './users.models';
 import { User } from '../models/user';
 
 export const USERS_FEATURE_KEY = 'users';
@@ -41,6 +39,6 @@ const reducer = createReducer(
 
 export function usersReducer(state: UsersState | undefined, action: Action) {
 
-  
+
   return reducer(state, action);
 }
