@@ -2,7 +2,9 @@
   "name": "@bluebits/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {"build": "next build",
+    "lint": "eslint ./src",
+    "test": "node ./run-tests.js"},
   "private": true,
   "dependencies": {
     "@angular/animations": "19.0.5",
