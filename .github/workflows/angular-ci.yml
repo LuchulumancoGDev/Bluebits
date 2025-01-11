@@ -21,11 +21,18 @@ jobs:
         with:
           node-version: '20.18.0'  # Use the version compatible with your Angular project
 
+      - name: Change to Angular project directory
+        working-directory: ./frontend/bluebits
+        run: echo "Changed directory to ./frontend"
+
       - name: Install dependencies
+        working-directory: ./frontend/bluebits
         run: npm install
 
       - name: Run build
+        working-directory: ./frontend/bluebits
         run: npm run build
 
       - name: Run tests
+        working-directory: ./frontend/bluebits
         run: npm test
